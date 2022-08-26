@@ -1,5 +1,6 @@
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
-
+import sys
+sys.path.append('/home/guanglinzhou/code/DomainBed')
 import collections
 
 

@@ -1,4 +1,6 @@
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
+import sys
+sys.path.append('/home/guanglinzhou/code/DomainBed')
 
 import argparse
 import collections
@@ -20,6 +22,8 @@ from domainbed import hparams_registry
 from domainbed import algorithms
 from domainbed.lib import misc
 from domainbed.lib.fast_data_loader import InfiniteDataLoader, FastDataLoader
+
+from domainbed.scripts.utils import auto_select_gpu
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Domain generalization')
@@ -89,11 +93,13 @@ if __name__ == "__main__":
     torch.manual_seed(args.seed)
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
-
-    if torch.cuda.is_available():
-        device = "cuda"
-    else:
-        device = "cpu"
+    
+    # torch.cuda.set_device(2)
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    # if torch.cuda.is_available():
+    #     device = "cuda"
+    # else:
+    #     device = "cpu"
 
     if args.dataset in vars(datasets):
         dataset = vars(datasets)[args.dataset](args.data_dir,

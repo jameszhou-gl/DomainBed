@@ -12,7 +12,9 @@ import torch
 
 def local_launcher(commands):
     """Launch commands serially on the local machine."""
-    for cmd in commands:
+    total_cmd = len(commands)
+    for i, cmd in enumerate(commands):
+        print('Launched {}/{}'.format(i, total_cmd))
         subprocess.call(cmd, shell=True)
 
 def dummy_launcher(commands):
@@ -33,6 +35,8 @@ def multi_gpu_launcher(commands):
 
     while len(commands) > 0:
         for gpu_idx in range(n_gpus):
+            if gpu_idx in [0, 1]:
+                continue
             proc = procs_by_gpu[gpu_idx]
             if (proc is None) or (proc.poll() is not None):
                 # Nothing is running on this GPU; launch a command.

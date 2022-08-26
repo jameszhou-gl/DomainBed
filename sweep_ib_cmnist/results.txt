@@ -1,0 +1,31 @@
+Total records: 12240
+
+-------- Dataset: ColoredMNIST, model selection method: training-domain validation set
+Algorithm             +90%                  +80%                  -90%                  Avg                  
+IB_ERM                71.8 +/- 0.3          73.7 +/- 0.2          9.9 +/- 0.1           51.8                 
+IB_IRM                71.7 +/- 0.1          73.3 +/- 0.3          10.2 +/- 0.2          51.8                 
+
+-------- Averages, model selection method: training-domain validation set
+Algorithm                  ColoredMNIST               Avg                       
+IB_ERM                     51.8 +/- 0.1               51.8                      
+IB_IRM                     51.8 +/- 0.0               51.8                      
+
+-------- Dataset: ColoredMNIST, model selection method: leave-one-domain-out cross-validation
+Algorithm             +90%                  +80%                  -90%                  Avg                  
+IB_ERM                52.5 +/- 1.6          50.6 +/- 0.2          10.0 +/- 0.1          37.7                 
+IB_IRM                64.3 +/- 4.6          49.7 +/- 0.2          14.0 +/- 2.8          42.6                 
+
+-------- Averages, model selection method: leave-one-domain-out cross-validation
+Algorithm                  ColoredMNIST               Avg                       
+IB_ERM                     37.7 +/- 0.6               37.7                      
+IB_IRM                     42.6 +/- 2.6               42.6                      
+
+-------- Dataset: ColoredMNIST, model selection method: test-domain validation set (oracle)
+Algorithm             +90%                  +80%                  -90%                  Avg                  
+IB_ERM                70.9 +/- 0.3          73.7 +/- 0.0          50.3 +/- 0.0          65.0                 
+IB_IRM                71.4 +/- 0.6          72.5 +/- 0.6          54.0 +/- 2.5          65.9                 
+
+-------- Averages, model selection method: test-domain validation set (oracle)
+Algorithm                  ColoredMNIST               Avg                       
+IB_ERM                     65.0 +/- 0.1               65.0                      
+IB_IRM                     65.9 +/- 0.4               65.9                      

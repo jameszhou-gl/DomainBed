@@ -160,7 +160,6 @@ class MNIST_CNN(nn.Module):
         x = x.view(len(x), -1)
         return x
 
-
 class ContextNet(nn.Module):
     def __init__(self, input_shape):
         super(ContextNet, self).__init__()

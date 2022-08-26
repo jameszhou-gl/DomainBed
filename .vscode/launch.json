@@ -1,0 +1,51 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args":[
+                "--input_dir",
+                "./debug_modified_sweep_out"
+            ]
+            // "args": [
+            //     "launch",
+            //     "--data_dir",
+            //     "./domainbed/data/MNIST",
+            //     "--dataset",
+            //     "ColoredMNIST",
+            //     "--algorithm",
+            //     "IRM",
+            //     "--output_dir",
+            //     "./debug_modified_sweep_out",
+            //     "--command_launcher",
+            //     "local",
+            //     "--n_hparams",
+            //     "1",
+            //     "--n_trials",
+            //     "1",
+            //     "--steps",
+            //     "200"    
+            // ]
+            // "args": [
+            //     "--data_dir",
+            //     "./domainbed/data/MNIST",
+            //     "--dataset",
+            //     "ColoredMNIST",
+            //     "--algorithm",
+            //     "IRM",
+            //     "--test_env",
+            //     "2"
+            // ]
+        }
+    ]
+}

@@ -3,6 +3,8 @@
 """
 Run sweeps
 """
+import sys
+sys.path.append('/home/guanglinzhou/code/DomainBed')
 
 import argparse
 import copy
@@ -146,7 +148,7 @@ if __name__ == "__main__":
     parser.add_argument('--output_dir', type=str, required=True)
     parser.add_argument('--data_dir', type=str, required=True)
     parser.add_argument('--seed', type=int, default=0)
-    parser.add_argument('--n_trials', type=int, default=3)
+    parser.add_argument('--n_trials', type=int, default=3,help='number of trials')
     parser.add_argument('--command_launcher', type=str, required=True)
     parser.add_argument('--steps', type=int, default=None)
     parser.add_argument('--hparams', type=str, default=None)
