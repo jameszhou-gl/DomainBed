@@ -13,10 +13,6 @@
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "args":[
-                "--input_dir",
-                "./debug_modified_sweep_out"
-            ]
             // "args": [
             //     "launch",
             //     "--data_dir",
@@ -24,17 +20,11 @@
             //     "--dataset",
             //     "ColoredMNIST",
             //     "--algorithm",
-            //     "IRM",
+            //     "ERM",
             //     "--output_dir",
-            //     "./debug_modified_sweep_out",
+            //     "./sweep_results/sweep_erm_cmnist",
             //     "--command_launcher",
-            //     "local",
-            //     "--n_hparams",
-            //     "1",
-            //     "--n_trials",
-            //     "1",
-            //     "--steps",
-            //     "200"    
+            //     "multi_gpu"
             // ]
             // "args": [
             //     "--data_dir",
@@ -42,10 +32,14 @@
             //     "--dataset",
             //     "ColoredMNIST",
             //     "--algorithm",
-            //     "IRM",
+            //     "ERM",
             //     "--test_env",
             //     "2"
             // ]
+            "args":[
+                "--input_dir",
+                "./sweep_results/sweep_irm_cmnist"
+            ]
         }
     ]
 }

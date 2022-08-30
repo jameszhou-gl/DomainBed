@@ -113,7 +113,7 @@ if __name__ == "__main__":
     # To allow unsupervised domain adaptation experiments, we split each test
     # env into 'in-split', 'uda-split' and 'out-split'. The 'in-split' is used
     # by collect_results.py to compute classification accuracies.  The
-    # 'out-split' is used by the Oracle model selectino method. The unlabeled
+    # 'out-split' is used by the Oracle model selectino method. The unlabeledq
     # samples in 'uda-split' are passed to the algorithm at training time if
     # args.task == "domain_adaptation". If we are interested in comparing
     # domain generalization and domain adaptation results, then domain
@@ -124,7 +124,7 @@ if __name__ == "__main__":
     uda_splits = []
     for env_i, env in enumerate(dataset):
         uda = []
-
+        #default out:in_=0.2:0.8
         out, in_ = misc.split_dataset(env,
             int(len(env)*args.holdout_fraction),
             misc.seed_hash(args.trial_seed, env_i))

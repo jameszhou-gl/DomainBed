@@ -48,8 +48,7 @@ ALGORITHMS = [
     'IB_IRM',
     'CAD',
     'CondCAD',
-    'Transfer', 
-    'IIB'
+    'IIB', 
     'Transfer',
     'CausIRL_CORAL',
     'CausIRL_MMD',
@@ -1981,7 +1980,7 @@ class IIB(ERM):
         z = self.reparameterize(mu, logvar)
         y = self.inv_classifier(z)
         return y
-=======
+
 class AbstractCausIRL(ERM):
     '''Abstract class for Causality based invariant representation learning algorithm from (https://arxiv.org/abs/2206.11646)'''
     def __init__(self, input_shape, num_classes, num_domains, hparams, gaussian):
@@ -2078,4 +2077,3 @@ class CausIRL_CORAL(AbstractCausIRL):
     def __init__(self, input_shape, num_classes, num_domains, hparams):
         super(CausIRL_CORAL, self).__init__(input_shape, num_classes, num_domains,
                                   hparams, gaussian=False)
->>>>>>> 51810e60c01fbfcf8f2db918b882e4445b8b6527

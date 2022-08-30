@@ -38,15 +38,15 @@ def multi_gpu_launcher(commands):
     except Exception:
         # If the env variable is not set, we use all GPUs
         available_gpus = [str(x) for x in range(torch.cuda.device_count())]
+    # configure the gpu id manually
+    available_gpus = [3, 4, 5, 6, 7]
     n_gpus = len(available_gpus)
     procs_by_gpu = [None]*n_gpus
 
     while len(commands) > 0:
-        for gpu_idx in range(n_gpus):
-            if gpu_idx in [0, 1]:
-                continue
-            proc = procs_by_gpu[gpu_idx]
         for idx, gpu_idx in enumerate(available_gpus):
+            # if gpu_idx in [0, 1, 2, 3]:
+            #     continue
             proc = procs_by_gpu[idx]
             if (proc is None) or (proc.poll() is not None):
                 # Nothing is running on this GPU; launch a command.
