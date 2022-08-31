@@ -40,35 +40,34 @@ The [currently available algorithms](domainbed/algorithms.py) are:
 * Quantifying and Improving Transferability in Domain Generalization (Transfer, [Zhang et al., 2021](https://arxiv.org/abs/2106.03632)), contributed by [@Gordon-Guojun-Zhang](https://github.com/Gordon-Guojun-Zhang)
 * Invariant Causal Mechanisms through Distribution Matching (CausIRL with CORAL or MMD, [Chevalley et al., 2022](https://arxiv.org/abs/2206.11646)), contributed by [@MathieuChevalley](https://github.com/MathieuChevalley)
 
-
-|                    year/publisher                    |                            Paper                             |         Code/Notes          |
-| :--------------------------------------------------: | :----------------------------------------------------------: | :-------------------------: |
-| **IEEE TRANSACTIONS ON NEURAL NETWORKS: 1999-09-01** |          An Overview of Statistical Learning Theory          |             ERM             |
-|               **JMLR'15: 2015-05-28**                |        Domain-Adversarial Training of Neural Networks        |            DANN             |
-|               **ECCV'16: 2016-07-06**                | Deep CORAL: Correlation Alignment for Deep Domain Adaptation |            CORAL            |
-|               **AAAI'18: 2017-10-10**                | Learning to Generalize: Meta-Learning for Domain Generalization |            MLDG             |
-|               **JMLR'21 :2017-11-21**                |     Domain Generalization by Marginal Transfer Learning      |             MTL             |
-|               **CVPR'18: 2018-06-01**                |   Domain Generalization with Adversarial Feature Learning    |             MMD             |
-|               **ECCV'18: 2018-09-08**                | deep domain generalization via conditional invariant adversarial networks |            CDANN            |
-|                **arXiv: 2019-07-05**                 |                 Invariant Risk Minimization                  |             IRM             |
-|               **CVPR-21: 2019-10-25**                |                   Style Agnostic Networks                    |           SagNet            |
-|               **ICLR'20: 2019-11-20**                | Distributionally Robust Neural Networks for Group Shifts: On the Importance of Regularization for Worst-Case Generalization |          GroupDRO           |
-|                **arXiv: 2020-01-03**                 |  Improve Unsupervised Domain Adaptation with Mixup Training  |            Mixup            |
-|               **ICML'21: 2020-03-02**                |  Out-of-Distribution Generalization via Risk Extrapolation   |            VREx             |
-|               **ECCV'20: 2020-07-05**                |    Self-Challenging Improves Cross-Domain Generalization     |             RSC             |
-|              **NeurIPS'21: 2020-07-06**              |                  Adaptive Risk Minimization                  |             ARM             |
-|                **arXiv: 2020-08-04**                 | Out-of-Distribution Generalization with Maximal Invariant Predictor |             IGA             |
-|               **ICLR'21: 2020-09-01**                |         Learning Explanations that are Hard to Vary          |           ANDMask           |
-|              **NeurIPS'21: 2020-11-18**              | Gradient Starvation: A Learning Proclivity in Neural Networks |             SD              |
-|               **ICLR'21: 2021-04-20**                |         Gradient Matching for Domain Generalization          |            Fish             |
-|               **ICCV'21: 2021-04-20**                |          Self-supervised Contrastive Regularization          |           SelfReg           |
-|               **ICML'21: 2021-06-04**                | SAND-mask: An Enhanced Gradient Masking Strategy for the Discovery of Invariances in Domain Generalization |          SANDMask           |
-|              **NeurIPS'21:2021-06-11**               | Invariance Principle Meets Information Bottleneck for Out-of-Distribution Generalization |       IB_ERM & IB_IRM       |
-|               **ICML'22: 2021-09-07**                | Invariant Gradient Variances for Out-of-distribution Generalization |            Fishr            |
-|                **arXiv: 2021-10-19**                 | Learning Representations that Support Robust Transfer of Predictors |             TRM             |
-|               **ICLR'22: 2021-12-31**                |         Optimal Representations for Covariate Shift          |        CAD & CondCAD        |
-|              **NeurIPS'21: 2021-06-27**              | Quantifying and Improving Transferability in Domain Generalization |          Transfer           |
-|                **arXiv: 2022-06-23**                 |  Invariant Causal Mechanisms through Distribution Matching   | CausIRL_CORAL & CausIRL_MMD |
+|                    year/publisher                    |                            Paper                             |                             Name                             |                            Notes                             |
+| :--------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| **IEEE TRANSACTIONS ON NEURAL NETWORKS: 1999-09-01** |          An Overview of Statistical Learning Theory          |                             ERM                              |                                                              |
+|               **JMLR'15: 2015-05-28**                |        Domain-Adversarial Training of Neural Networks        |                             DANN                             |                                                              |
+|               **ECCV'16: 2016-07-06**                | Deep CORAL: Correlation Alignment for Deep Domain Adaptation |                            CORAL                             |                                                              |
+|               **AAAI'18: 2017-10-10**                | Learning to Generalize: Meta-Learning for Domain Generalization |                             MLDG                             |                                                              |
+|               **JMLR'21 :2017-11-21**                |     Domain Generalization by Marginal Transfer Learning      |                             MTL                              |                                                              |
+|               **CVPR'18: 2018-06-01**                |   Domain Generalization with Adversarial Feature Learning    |                             MMD                              |                                                              |
+|               **ECCV'18: 2018-09-08**                | deep domain generalization via conditional invariant adversarial networks |                            CDANN                             |                                                              |
+|                **arXiv: 2019-07-05**                 |                 Invariant Risk Minimization                  |                             IRM                              |                                                              |
+|               **CVPR-21: 2019-10-25**                |                   Style Agnostic Networks                    |                            SagNet                            |                                                              |
+|               **ICLR'20: 2019-11-20**                | Distributionally Robust Neural Networks for Group Shifts: On the Importance of Regularization for Worst-Case Generalization |                           GroupDRO                           |                                                              |
+|                **arXiv: 2020-01-03**                 |  Improve Unsupervised Domain Adaptation with Mixup Training  |                            Mixup                             |                                                              |
+|               **ICML'21: 2020-03-02**                |  Out-of-Distribution Generalization via Risk Extrapolation   |                             VREx                             |                                                              |
+|               **ECCV'20: 2020-07-05**                |    Self-Challenging Improves Cross-Domain Generalization     |                             RSC                              |                                                              |
+|              **NeurIPS'21: 2020-07-06**              |                  Adaptive Risk Minimization                  |                             ARM                              |                                                              |
+|                **arXiv: 2020-08-04**                 | Out-of-Distribution Generalization with Maximal Invariant Predictor |                             IGA                              |                                                              |
+|               **ICLR'21: 2020-09-01**                |         Learning Explanations that are Hard to Vary          |                           ANDMask                            |                                                              |
+|              **NeurIPS'21: 2020-11-18**              | Gradient Starvation: A Learning Proclivity in Neural Networks |                              SD                              |                                                              |
+|               **ICLR'21: 2021-04-20**                |         Gradient Matching for Domain Generalization          |                             Fish                             |                                                              |
+|               **ICCV'21: 2021-04-20**                |          Self-supervised Contrastive Regularization          |                           SelfReg                            |                                                              |
+|               **ICML'21: 2021-06-04**                | SAND-mask: An Enhanced Gradient Masking Strategy for the Discovery of Invariances in Domain Generalization |                           SANDMask                           |                                                              |
+|              **NeurIPS'21:2021-06-11**               | Invariance Principle Meets Information Bottleneck for Out-of-Distribution Generalization |                       IB_ERM & IB_IRM                        |                                                              |
+|               **ICML'22: 2021-09-07**                | Invariant Gradient Variances for Out-of-distribution Generalization |                            Fishr                             |                                                              |
+|                **arXiv: 2021-10-19**                 | Learning Representations that Support Robust Transfer of Predictors |                             TRM                              |                                                              |
+|              **NeurIPS'21: 2021-06-27**              | Quantifying and Improving Transferability in Domain Generalization |                           Transfer                           | Openreview中评分较高，值得深入看看，其和各metrics之间的关系； |
+|               **ICLR'22: 2021-12-31**                |         Optimal Representations for Covariate Shift          | CAD & CondCAD<br />[optdom](https://github.com/ryoungj/optdom) |                                                              |
+|                **arXiv: 2022-06-23**                 |  Invariant Causal Mechanisms through Distribution Matching   |                 CausIRL_CORAL & CausIRL_MMD                  |         ICLR被拒，整体评分比较低，且工作novelty不够          |
 
 
 Send us a PR to add your algorithm! Our implementations use ResNet50 / ResNet18 networks ([He et al., 2015](https://arxiv.org/abs/1512.03385)) and the hyper-parameter grids [described here](domainbed/hparams_registry.py).
