@@ -13,10 +13,13 @@ import os
 
 def local_launcher(commands):
     """Launch commands serially on the local machine."""
+    # available_gpus = [3, 4, 5, 6, 7]
+    gpu_idx = '3'
     total_cmd = len(commands)
     for i, cmd in enumerate(commands):
         print('Launched {}/{}'.format(i, total_cmd))
-        subprocess.call(cmd, shell=True)
+        subprocess.call(f'CUDA_VISIBLE_DEVICES={gpu_idx} {cmd}', shell=True)
+        
 
 def dummy_launcher(commands):
     """

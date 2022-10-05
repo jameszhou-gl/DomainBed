@@ -38,7 +38,7 @@
             // ]
             "args":[
                 "--input_dir",
-                "./sweep_results/sweep_irm_cmnist"
+                "/home/guanglinzhou/code/DomainBed/train_output"
             ]
         }
     ]

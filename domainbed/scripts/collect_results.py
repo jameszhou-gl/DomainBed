@@ -69,11 +69,13 @@ def print_table(table, header_text, row_labels, col_labels, colwidth=10,
 
 def print_results_tables(records, selection_method, latex):
     """Given all records, print a results table for each dataset."""
+    # ! this is the core logic part in the collect_results.py and we need to find what is 'sweep_acc'
     grouped_records = reporting.get_grouped_records(records).map(lambda group:
         { **group, "sweep_acc": selection_method.sweep_acc(group["records"]) }
     ).filter(lambda g: g["sweep_acc"] is not None)
 
     # read algorithm names and sort (predefined order)
+    # can add alg_name not in predefined list
     alg_names = Q(records).select("args.algorithm").unique()
     alg_names = ([n for n in algorithms.ALGORITHMS if n in alg_names] +
         [n for n in alg_names if n not in algorithms.ALGORITHMS])

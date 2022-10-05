@@ -1966,7 +1966,8 @@ class IIB(ERM):
 
         # use beta to balance the info loss.
         total_loss = inv_loss + env_loss + self.hparams['lambda_beta'] * ib_loss + self.hparams['lambda_inv_risks'] * (
-                inv_loss - env_loss) ** 2
+                # inv_loss - env_loss) ** 2
+        # total_loss = inv_loss + env_loss + self.hparams['lambda_beta'] * ib_loss
         # or (inv_loss - env_loss) ** 2
         self.optimizer.zero_grad()
         total_loss.backward()

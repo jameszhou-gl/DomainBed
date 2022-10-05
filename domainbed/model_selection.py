@@ -18,6 +18,7 @@ class SelectionMethod:
     @classmethod
     def run_acc(self, run_records):
         """
+        # ? what is one run?
         Given records from a run, return a {val_acc, test_acc} dict representing
         the best val-acc and corresponding test-acc for that run.
         """
